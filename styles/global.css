@@ -1,11 +1,21 @@
-.footer {
+.navbar {
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 body {
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 }
