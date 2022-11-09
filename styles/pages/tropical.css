@@ -1,3 +1,7 @@
 body {
     background: var(--primary);
+    color: white;
+}
+section {
+    padding: 1rem;
 }
