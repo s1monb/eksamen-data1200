@@ -24,10 +24,13 @@
         </header>
         <main>
             <h2>Velkommen til Elvebakken</h2>
+         
             <section class="informasjon">
+                
+         
 
-
-                <p >Elvebakken er en plass hvor du kan leie plass rom konferanser, fester eller liknende. <br>
+                <p>
+                    Elvebakken er en plass hvor du kan leie plass rom konferanser, fester eller liknende. <br>
                    Du kan lese mer om dette på booking siden vår og finne ut av hvordan du kan booke i menyen over. <br>
                    <a href="booking.html">Her kan du booke våre flotte lokaler</a> <br>
                    I tillegg har vi en flott kafé som tilbyr mat og drikke til rimelige priser.
@@ -36,7 +39,10 @@
                 <div class="infoBilde">
 
                 <img src="images/index-01.jpeg" alt="infoBilde" style="height: 300px; width: 500px; vertical-align:middle" >
+                <br>
+                <a href="#referanser"> ➤ Her kan du se tilbakemeldinger fra over 2000 fornøyde gjester</a> <br>
                 </div>
+                <br>
 
                      </p>
             </section>
@@ -50,7 +56,7 @@
                 </section>
 
                
-                    <h2>Referanser</h2>
+                    <h2 id="referanser">Referanser</h2>
                     <section class="referanser">
 
                     <p>Nora 21 år har skrevet følgende om Elvebakken: Jeg feiret 20 års dagen min der og det var en flott lokasjon <br>
@@ -77,14 +83,7 @@
                   
                      var bilder = document.querySelectorAll(".bilde");
                   
-                     for (var i = 0; i < bilder.length; i++) {
-                       bilder[i].style.backgroundImage = "url(bilder/"+ bildefiler[i] + ")";
-                  
-                     if (i!= 0) {
-                       bilder[i].style.display = "none";
-                  
-                       }
-                     }
+                    
                   setTimeout(flytt, tid);
                   
                   function flytt(){
