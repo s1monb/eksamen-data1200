@@ -1,0 +1,14 @@
+#hero {
+    background-color: var(--tertiary);
+    color: white;
+    padding: 3rem 0;
+}
+
+#hero h1 {
+    font-size: 2rem;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    max-width: 400px;
+}
