@@ -26,7 +26,95 @@
                 </nav>
             </div>
         </header>
-        <main>Main content here</main>
+        <main>
+            <h2>Velkommen til Elvebakken</h2>
+         
+            <section class="informasjon">
+                
+         
+
+                <p>
+                    Elvebakken er en plass hvor du kan leie plass rom konferanser, fester eller liknende. <br>
+                   Du kan lese mer om dette på booking siden vår og finne ut av hvordan du kan booke i menyen over. <br>
+                   <a href="booking.html">Her kan du booke våre flotte lokaler</a> <br>
+                   I tillegg har vi en flott kafé som tilbyr mat og drikke til rimelige priser.
+                <br>   Informasjon om kafeen kan finnes på cafe siden i menyen over. <br>
+                <a href="cafe.html">Her kan du lese om vår flotte cafe</a> 
+                <div class="infoBilde">
+
+                <img src="images/index-01.jpeg" alt="infoBilde" style="height: 300px; width: 500px; vertical-align:middle" >
+                <br>
+                <a href="#referanser"> ➤ Her kan du se tilbakemeldinger fra over 2000 fornøyde gjester</a> <br>
+                </div>
+                <br>
+
+                     </p>
+            </section>
+
+            <section class="bildekarusell">
+                    <div class="bilde"> <img src="images/index-01.jpeg" alt="bilde1" style="height: 400px; width: 700px;">   </div>
+                    <div class="bilde">   <img src="images/index-bildekarusell-01.jpeg" alt="bilde2"style="height: 400px; width: 700px;" ></div>  
+                    <div class="bilde">   <img src="images/index-bildekarusell-02.jpeg" alt="bilde3"style="height: 400px; width: 700px;" ></div>  
+                    <div class="bilde">   <img src="images/index-bildekarusell-03.jpeg" alt="bilde4"style="height: 400px; width: 700px;" ></div>  
+
+                </section>
+
+               
+                    <h2 id="referanser">Referanser</h2>
+                    <section class="referanser">
+
+                    <p>Nora 21 år har skrevet følgende om Elvebakken: Jeg feiret 20 års dagen min der og det var en flott lokasjon <br>
+                       Jens 45 år har skrevet følgende om Elvebakken: Bedriften min hadde kickoff her og vi ble godt tatt vare på <br>
+                       Janne 67 år har skrevet følgende om Elvebakken: Barnebarnet mitt hadde konfirmasjon her og jeg har aldri opplevd en så fin lokasjon <br>
+                       Med over 2546 tilbakemeldinger: <br>
+                       
+                       ★★★★☆/★★★★★
+                
+
+                    </p>
+
+
+
+                </section>
+
+                      <script>
+                  
+                     var indeksSynligBilde = 0;
+                     var indeksNesteBilde;
+                     var tid = 3000;
+                  
+                     var bildefiler=[ "bilde1", "bilde2", "bilde3", "bilde4"];
+                  
+                     var bilder = document.querySelectorAll(".bilde");
+                  
+                    
+                  setTimeout(flytt, tid);
+                  
+                  function flytt(){
+                    if (indeksSynligBilde === bilder.length -1) {
+                      indeksNesteBilde = 0;
+                    }else{
+                      indeksNesteBilde=indeksSynligBilde + 1;
+                    }
+                    bilder[indeksNesteBilde].style.left ="800px";
+                    bilder[indeksNesteBilde].style.display="initial";
+                    bilder[indeksNesteBilde].style.animation="innFraHoyre 2s forwards";
+                  
+                    bilder[indeksSynligBilde].style.animation= "UtTilVenstre 2s forwards";
+                  
+                    indeksSynligBilde = indeksNesteBilde;
+                    setTimeout(flytt, tid);
+                  }
+                      </script>
+                  
+    
+
+
+
+
+
+
+        </main>
         <footer class="footer">
             <div class="container">
                 <div>
