@@ -4,6 +4,11 @@ body {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.navbar {
+    border-bottom: 1px solid var(--primary);
+}
+
 h1{
     font-size: 40px;
     text-align: center;
@@ -157,6 +162,3 @@ button:hover{
   0%  {left: -900px}
   100%{left:0}
 }
-
-
-
