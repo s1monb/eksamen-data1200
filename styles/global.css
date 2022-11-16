@@ -19,6 +19,7 @@ h1 {
 .navbar {
     box-sizing: border-box;
     position: fixed;
+    z-index: 50;
     width: 100vw;
     top: 0;
     background: var(--white);

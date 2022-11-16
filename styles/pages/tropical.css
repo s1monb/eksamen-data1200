@@ -1,112 +1,103 @@
-
 body {
     background: var(--primary);
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .navbar {
     border-bottom: 1px solid var(--primary);
 }
 
-h1{
+main h1 {
     font-size: 40px;
     text-align: center;
 }
-h2,h3{
+main h2,
+main h3 {
     text-align: center;
     font-size: 35px;
- 
 }
 
 section {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    
-    
 }
 a:link {
-    color:#0000EE;
-    
-  }
-  a:hover{
-    color: #551A8B;
-  }
+    color: #0000ee;
+}
+a:hover {
+    color: #551a8b;
+}
 
-  a:visited {
-    color: #551A8B;
-  }
+a:visited {
+    color: #551a8b;
+}
 
-  .person{
-    flex-direction: row;
-   font-size: large;
-  }
-  
-  .nadia{
+.person {
     flex-direction: row;
     font-size: large;
-  }
+}
 
-  .avsnitt1,.avsnitt2, .avsnitt3{
+.nadia {
+    flex-direction: row;
+    font-size: large;
+}
+
+.avsnitt1,
+.avsnitt2,
+.avsnitt3 {
     width: 35%;
     margin: 12px;
     padding-bottom: 20px;
     font-size: 25px;
     flex-direction: row;
     float: left;
+}
 
-    
-  }
-
-  
-table{
+table {
     margin: 10px;
     width: 70%;
-  border: 2px #7f161e dotted;
-    text-align: justify;   
+    border: 2px #7f161e dotted;
+    text-align: justify;
 }
 
-th{
+th {
     font-size: 30px;
 }
-td{
-font-size: 20px;
+td {
+    font-size: 20px;
 }
-.problemer{
+.problemer {
     flex-direction: row;
-
 }
-.løsninger{
+.løsninger {
     flex-direction: row;
-
 }
 
-.stor{
-    background-color: #7f161e;;
+.stor {
+    background-color: #7f161e;
     border-radius: 50%;
     float: left;
-    font-size: 15px; 
-    width: 18px; 
+    font-size: 15px;
+    width: 18px;
     margin-right: 12px;
     text-align: center;
 }
 
-
-
-.innpakning{
-  display: flex;
-  width: 80%
-  min-width:900px;
-  flex-direction: column;
+.innpakning {
+    display: flex;
+    width: 80%;
+    min-width: 900px;
+    flex-direction: column;
 }
-.knapper{
-  width:900px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+.knapper {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
-button{
+button {
     border: none;
     outline: none;
     padding: 10px 16px;
@@ -114,51 +105,67 @@ button{
     cursor: pointer;
     font-size: 18px;
     margin: 4px;
-  }
-.valgt{
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: grey;
-  cursor: pointer;
-  font-size: 18px;
-  margin: 4px;
+}
+.valgt {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: grey;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 4px;
 }
 
-button:hover{
-  background-color: grey;
+button:hover {
+    background-color: grey;
 }
-.bildekarusell{
-  width: 900px;
-  height: 450px;
-  border: 5px solid black;
-  background-color: #f0f0f0;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
+.bildekarusell {
+    width: 900px;
+    height: 450px;
+    border: 5px solid black;
+    background-color: #f0f0f0;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
 }
 
-.bilde{
-  width:900px;
-  height:450px;
-  background-size: 900px 450px;
-  background-repeat: no-repeat;
-  position: absolute;
+.bilde {
+    width: 900px;
+    height: 450px;
+    background-size: 900px 450px;
+    background-repeat: no-repeat;
+    position: absolute;
 }
 
 @keyframes innFraHoyre {
-  0%  {left:900px}
-  100%{left:0}
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: 0;
+    }
 }
 @keyframes utFraHoyre {
-  0%  {left:0}
-  100%{left:900px}
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 900px;
+    }
 }
 @keyframes utFraVenstre {
-  0%  {left: 0}
-  100%{left:-900px}
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -900px;
+    }
 }
 @keyframes innTilVenstre {
-  0%  {left: -900px}
-  100%{left:0}
+    0% {
+        left: -900px;
+    }
+    100% {
+        left: 0;
+    }
 }
