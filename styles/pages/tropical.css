@@ -116,8 +116,8 @@ button {
     margin: 4px;
 }
 
-button:hover {
-    background-color: grey;
+button:hover{
+  background-color: grey;
 }
 .bildekarusell {
     width: 900px;
@@ -138,34 +138,18 @@ button:hover {
 }
 
 @keyframes innFraHoyre {
-    0% {
-        left: 900px;
-    }
-    100% {
-        left: 0;
-    }
+  0%  {left:900px}
+  100%{left:0}
 }
 @keyframes utFraHoyre {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: 900px;
-    }
+  0%  {left:0}
+  100%{left:900px}
 }
 @keyframes utFraVenstre {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -900px;
-    }
+  0%  {left: 0}
+  100%{left:-900px}
 }
 @keyframes innTilVenstre {
-    0% {
-        left: -900px;
-    }
-    100% {
-        left: 0;
-    }
+  0%  {left: -900px}
+  100%{left:0}
 }

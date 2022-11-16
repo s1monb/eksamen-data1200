@@ -75,17 +75,21 @@
                 
                      var indeksSynligBilde = 0;
                      var indeksNesteBilde;
-                     var tid = 3000;
+                     var tid = 2000;
                   
                      var bildefiler=[ "bilde1", "bilde2", "bilde3", "bilde4"];
                   
                      var bilder = document.querySelectorAll(".bilde");
                   
-                    
+                     bilder[0].style.left ="800px";
+                    bilder[0].style.display="initial";
+                    bilder[0].style.animation="innFraHoyre 2s forwards";
+                    bilder[0].style.animation= "UtTilVenstre 2s forwards";
+
                   setTimeout(flytt, tid);
                   
                   function flytt(){
-                    if (indeksSynligBilde === bilder.length -1) {
+                    if (indeksSynligBilde === bilder.length-1 ) {
                       indeksNesteBilde = 0;
                     }else{
                       indeksNesteBilde=indeksSynligBilde + 1;
