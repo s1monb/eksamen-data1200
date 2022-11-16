@@ -1,35 +1,30 @@
-body{
-  background-color: beige;
-  font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
 }
-h2{
+main h2 {
     border: #7f161e solid 2px;
     text-align: center;
     font-size: 40px;
-    font-family:   Arial, sans-serif;
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+    font-family: Arial, sans-serif;
 }
 
-.informasjon{
-  font-size: 25px;
+.informasjon {
+    font-size: 25px;
     display: flex;
-    align-items:center;
-border: #7f161e solid 2px;
-    
-    
-   
+    align-items: center;
+    border: #7f161e solid 2px;
 }
-.infoBilde{
-    flex-basis: 20%
-   
+.infoBilde {
+    flex-basis: 20%;
+}
 
-  }
-  
- p {
+main p {
     margin: 20px;
     padding-left: 20px;
-
-  }
- 
+}
 
 .bildekarusell {
     width: 700px;
@@ -37,22 +32,30 @@ border: #7f161e solid 2px;
     position: relative;
     margin: 150px auto;
     overflow: hidden;
-    background-color: #7f161e;;
-  }
-  .bilde{
+    background-color: #7f161e;
+}
+.bilde {
     width: 600px;
     height: 600px;
     position: absolute;
     left: 0px;
-  }
-  @keyframes innFraHoyre {
-    from{ left: 700px;}
-    to{ left: 0px; }
-  }
-  @keyframes UtTilVenstre {
-    from{ left: 0px;}
-    to{ left: -700px; }
-  }
-  .referanser{
+}
+@keyframes innFraHoyre {
+    from {
+        left: 700px;
+    }
+    to {
+        left: 0px;
+    }
+}
+@keyframes UtTilVenstre {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -700px;
+    }
+}
+.referanser {
     font-size: 20px;
-  }
+}
