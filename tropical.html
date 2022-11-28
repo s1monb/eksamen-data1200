@@ -10,19 +10,24 @@
         <link rel="stylesheet" href="styles/pages/tropical.css" />
     </head>
     <body>
-        <header class="header">
-            <h1>Elvebakken Cafe</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="cafe.html">Cafe & meny</a></li>
-                    <li><a href="booking.html">Booking</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="tropical.html">Tropical</a></li>
-                </ul>
-            </nav>
+        <header class="navbar">
+            <div class="container">
+                <a href="index.html"><h1>Elvebakken Cafe</h1></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="cafe.html">Cafe</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li>
+                            <a class="active" href="tropical.html">Tropical</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main>
+
+        <main class="container">
             <label class="switch">
                 
                 <input type="checkbox"> 
@@ -308,6 +313,112 @@ function knappIkkeSynlig() {
 
 
             </script>
+
         </footer>
+
+        <script>
+            var bilder = ["bilde1.jpg", "bilde2.jpg", "bilde3.jpg"];
+            var bildekarusellEl = document.querySelector(".bildekarusell");
+            var bilderEl = document.querySelectorAll(".bilde");
+            var indexSynligBilde = 0;
+            var indexNesteBilde;
+
+            //Lager knapper for å styre til høyre og utFraVenstre
+            var knapperEl = document.querySelector(".knapper");
+            var forrigeEl = document.createElement("button");
+            forrigeEl.innerHTML = "Forrige";
+            forrigeEl.className = "forrige";
+            forrigeEl.addEventListener("click", forrige);
+            knapperEl.appendChild(forrigeEl);
+
+            for (var i = 0; i < bilderEl.length; i++) {
+                bildeNrEl = document.createElement("button");
+                bildeNrEl.innerHTML = i + 1;
+                bildeNrEl.value = i;
+                bildeNrEl.addEventListener("click", valgtBilde);
+                knapperEl.appendChild(bildeNrEl);
+            }
+
+            var nesteEl = document.createElement("button");
+            nesteEl.className = "neste";
+            nesteEl.innerHTML = "Neste";
+            nesteEl.addEventListener("click", neste);
+            knapperEl.appendChild(nesteEl);
+
+            var bytt = setTimeout(flytt, tid);
+            knappSynlig();
+
+            function flytt() {
+                byttBilde();
+                bytt = setTimeout(flytt, tid);
+            }
+
+            function valgtBilde(e) {
+                clearTimeout(bytt);
+                indexNesteBilde = Number(e.target.value);
+                animasjon(indexNesteBilde);
+                bytt = setTimeout(flytt, tid);
+            }
+            function forrige() {
+                clearTimeout(bytt);
+                if (indexSynligBilde == 0) {
+                    indexNesteBilde = bilderEl.length - 1;
+                } else {
+                    indexNesteBilde = indexSynligBilde - 1;
+                }
+
+                knappIkkeSynlig();
+                bilderEl[indexSynligBilde].style.animation =
+                    "utFraHoyre 2s ease-in-out forwards";
+
+                bilderEl[indexNesteBilde].style.display = "initial";
+                bilderEl[indexNesteBilde].style.animation =
+                    "innTilVenstre 2s ease-in-out forwards";
+
+                indexSynligBilde = indexNesteBilde;
+                knappSynlig();
+            }
+
+            function neste() {
+                clearTimeout(bytt);
+                byttBilde();
+                bytt = setTimeout(flytt, tid);
+            }
+
+            function byttBilde() {
+                if (indexSynligBilde >= bilderEl.length - 1) {
+                    indexNesteBilde = 0;
+                } else {
+                    indexNesteBilde = indexSynligBilde + 1;
+                }
+                animasjon(indexNesteBilde);
+            }
+
+            function animasjon(indexNesteBilde) {
+                knappIkkeSynlig();
+                bilderEl[indexSynligBilde].style.animation =
+                    "utFraVenstre 1.5s ease-in-out forwards";
+                bilderEl[indexNesteBilde].style.display = "initial";
+                bilderEl[indexNesteBilde].style.animation =
+                    "innFraHoyre 1.5s ease-in-out forwards";
+
+                indexSynligBilde = indexNesteBilde;
+                knappSynlig();
+            }
+
+            function knappSynlig() {
+                var knappEl = document.querySelector(
+                    "button[value='" + indexSynligBilde + "']"
+                );
+                knappEl.className = "valgt";
+            }
+
+            function knappIkkeSynlig() {
+                var knappEl = document.querySelector(
+                    "button[value='" + indexSynligBilde + "']"
+                );
+                knappEl.className = "button";
+            }
+        </script>
     </body>
 </html>

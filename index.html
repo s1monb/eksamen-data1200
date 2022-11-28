@@ -11,22 +11,26 @@
     </head>
     <body>
         <header class="navbar">
-            <h1>Elvebakken Cafe</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="cafe.html">Cafe & meny</a></li>
-                    <li><a href="booking.html">Booking</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="tropical.html">Tropical</a></li>
-                </ul>
-            </nav>
+            <div class="container">
+                <a href="index.html"><h1>Elvebakken Cafe</h1></a>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="index.html">Hjem</a></li>
+                        <li>
+                            <a href="cafe.html">Cafe</a>
+                        </li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="tropical.html">Tropical</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
             <button onclick="toggleDarkMode()">Toggle dark mode</button>
-            <h2>Velkommen til Elvebakken</h2>
+            <h2 class="container">Velkommen til Elvebakken</h2>
          
-            <section class="informasjon">
+            <section class="informasjon container">
                 
          
 
@@ -48,30 +52,24 @@
                      </p>
             </section>
 
-            <section class="bildekarusell">
+            <section class="bildekarusell container">
                     <div class="bilde"> <img src="images/index-01.jpeg" alt="bilde1" style="height: 400px; width: 700px;">   </div>
                     <div class="bilde">   <img src="images/index-bildekarusell-01.jpeg" alt="bilde2"style="height: 400px; width: 700px;" ></div>  
                     <div class="bilde">   <img src="images/index-bildekarusell-02.jpeg" alt="bilde3"style="height: 400px; width: 700px;" ></div>  
                     <div class="bilde">   <img src="images/index-bildekarusell-03.jpeg" alt="bilde4"style="height: 400px; width: 700px;" ></div>  
 
-                </section>
+            </section>
 
                
-                    <h2 id="referanser">Referanser</h2>
-                    <section class="referanser">
+            <section class="referanser container">
+                        <h2 id="referanser">Referanser</h2>
 
                     <p>Nora 21 år har skrevet følgende om Elvebakken: Jeg feiret 20 års dagen min der og det var en flott lokasjon <br>
                        Jens 45 år har skrevet følgende om Elvebakken: Bedriften min hadde kickoff her og vi ble godt tatt vare på <br>
                        Janne 67 år har skrevet følgende om Elvebakken: Barnebarnet mitt hadde konfirmasjon her og jeg har aldri opplevd en så fin lokasjon <br>
                        Med over 2546 tilbakemeldinger: <br>
-                       
                        ★★★★☆/★★★★★
-                
-
                     </p>
-
-
-
                 </section>
 
                       <script>
@@ -81,19 +79,24 @@ function toggleDarkMode() {
    element.classList.toggle("dark-mode");
 }
                   
+                
                      var indeksSynligBilde = 0;
                      var indeksNesteBilde;
-                     var tid = 3000;
+                     var tid = 2000;
                   
                      var bildefiler=[ "bilde1", "bilde2", "bilde3", "bilde4"];
                   
                      var bilder = document.querySelectorAll(".bilde");
                   
-                    
+                     bilder[0].style.left ="800px";
+                    bilder[0].style.display="initial";
+                    bilder[0].style.animation="innFraHoyre 2s forwards";
+                    bilder[0].style.animation= "UtTilVenstre 2s forwards";
+
                   setTimeout(flytt, tid);
                   
                   function flytt(){
-                    if (indeksSynligBilde === bilder.length -1) {
+                    if (indeksSynligBilde === bilder.length-1 ) {
                       indeksNesteBilde = 0;
                     }else{
                       indeksNesteBilde=indeksSynligBilde + 1;
@@ -108,30 +111,30 @@ function toggleDarkMode() {
                     setTimeout(flytt, tid);
                   }
                       </script>
-                  
-    
-
-
-
-
-
 
         </main>
         <footer class="footer">
-            <h2>Elvebakken Kafé</h2>
-            <h3>Kontakt oss</h3>
-            <p>Skomværgata 2, 3921 Porsgrunn</p>
-            <p><a href="tel:+4792661700">+47 92 66 17 00</a></p>
-            <p>
-                <a href="mailto:reservasjon@elvebakkenkafe.no"
-                    >reservasjon@elvebakkenkafe.no</a
-                >
-            </p>
-
-            <h3>Åpningstider</h3>
-            <p>Mandag - Fredag: 10:00 - 16:00</p>
-            <p>Lørdag 10:00-17:00</p>
-            <p>Søndag stengt</p>
+            <div class="container">
+                <div>
+                    <h2>Elvebakken Kafé</h2>
+                </div>
+                <div>
+                    <h3>Kontakt oss</h3>
+                    <p>Skomværgata 2, 3921 Porsgrunn</p>
+                    <p><a href="tel:+4792661700">+47 92 66 17 00</a></p>
+                    <p>
+                        <a href="mailto:reservasjon@elvebakkenkafe.no"
+                            >reservasjon@elvebakkenkafe.no</a
+                        >
+                    </p>
+                </div>
+                <div>
+                    <h3>Åpningstider</h3>
+                    <p>Mandag - Fredag: 10:00 - 16:00</p>
+                    <p>Lørdag 10:00-17:00</p>
+                    <p>Søndag stengt</p>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
