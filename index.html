@@ -27,6 +27,7 @@
             </div>
         </header>
         <main>
+            <button onclick="toggleDarkMode()">Toggle dark mode</button>
             <h2 class="container">Velkommen til Elvebakken</h2>
          
             <section class="informasjon container">
@@ -72,6 +73,12 @@
                 </section>
 
                       <script>
+
+function toggleDarkMode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+                  
                 
                      var indeksSynligBilde = 0;
                      var indeksNesteBilde;
