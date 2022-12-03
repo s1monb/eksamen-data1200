@@ -32,6 +32,7 @@
 
 #menu ul li {
     padding: 0.25rem 0.5rem; /* For larger area to hit */
+    font-size: 1.3rem;
 }
 
 #menu h2 {
@@ -56,6 +57,8 @@
 }
 #menu .category div img {
     width: 100%;
+    aspect-ratio: 1.5;
+    object-fit: cover;
     margin: 0 auto;
 }
 
