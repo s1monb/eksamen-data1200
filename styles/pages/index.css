@@ -1,69 +1,104 @@
 body {
-    background-color: beige;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--white);
 }
 
-.dark-mode {
-  background-color: rgb(14, 13, 20);
-  color: rgb(199, 199, 199);
-  
-}
-h2{
-
-main h2 {
-    border: #7f161e solid 2px;
-    text-align: center;
-    font-size: 40px;
-    margin-top: 32px !important;
-    margin-bottom: 32px !important;
-    font-family: Arial, sans-serif;
-}
-
-.informasjon {
-    font-size: 25px;
+#informasjon .container {
     display: flex;
-    align-items: center;
-    border: #7f161e solid 2px;
-}
-.infoBilde {
-    flex-basis: 20%;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 24px;
 }
 
-main p {
-    margin: 20px;
-    padding-left: 20px;
+@media (max-width: 768px) {
+    #informasjon .container {
+        flex-direction: column;
+    }
 }
 
-.bildekarusell {
-    width: 700px;
-    height: 400px;
-    position: relative;
-    margin: 150px auto;
+#informasjon p,
+#informasjon a {
+    max-width: 500px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+#informasjon :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+#informasjon img {
+    padding: 0 1rem;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    max-width: 800px;
+}
+
+#bildekarusell h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+#bildekarusell {
+    margin: 80px auto;
     overflow: hidden;
-    background-color: #7f161e;
 }
-.bilde {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    left: 0px;
+
+#bildekarusell img {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    object-fit: cover;
 }
-@keyframes innFraHoyre {
-    from {
-        left: 700px;
-    }
-    to {
-        left: 0px;
+
+#referanser {
+    padding: 0 1rem;
+    margin: 80px auto;
+}
+
+#referanser h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#referanser ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    #referanser ul {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@keyframes UtTilVenstre {
-    from {
-        left: 0px;
-    }
-    to {
-        left: -700px;
+@media (max-width: 500px) {
+    #referanser ul {
+        grid-template-columns: 1fr;
     }
 }
-.referanser {
-    font-size: 20px;
+
+#referanser ul li {
+    list-style: none;
+    background-color: white;
+    box-shadow: 3px 3px 20px 3px #00000010;
+    border-radius: 10px;
+    padding: 16px 36px;
+}
+
+#referanser ul li :nth-child(1) {
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+#referanser ul li :nth-child(2) {
+    font-size: 1.3rem;
+}
+
+#star {
+    color: goldenrod;
 }

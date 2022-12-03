@@ -27,91 +27,164 @@
             </div>
         </header>
         <main>
-            <button onclick="toggleDarkMode()">Toggle dark mode</button>
-            <h2 class="container">Velkommen til Elvebakken</h2>
-         
-            <section class="informasjon container">
-                
-         
-
-                <p>
-                    Elvebakken er en plass hvor du kan leie plass rom konferanser, fester eller liknende. <br>
-                   Du kan lese mer om dette på booking siden vår og finne ut av hvordan du kan booke i menyen over. <br>
-                   <a href="booking.html">Her kan du booke våre flotte lokaler</a> <br>
-                   I tillegg har vi en flott kafé som tilbyr mat og drikke til rimelige priser.
-                <br>   Informasjon om kafeen kan finnes på cafe siden i menyen over. <br>
-                <a href="cafe.html">Her kan du lese om vår flotte cafe</a> 
-                <div class="infoBilde">
-
-                <img src="images/index-01.jpeg" alt="infoBilde" style="height: 300px; width: 500px; vertical-align:middle" >
-                <br>
-                <a href="#referanser"> ➤ Her kan du se tilbakemeldinger fra over 2000 fornøyde gjester</a> <br>
-                </div>
-                <br>
-
-                     </p>
-            </section>
-
-            <section class="bildekarusell container">
-                    <div class="bilde"> <img src="images/index-01.jpeg" alt="bilde1" style="height: 400px; width: 700px;">   </div>
-                    <div class="bilde">   <img src="images/index-bildekarusell-01.jpeg" alt="bilde2"style="height: 400px; width: 700px;" ></div>  
-                    <div class="bilde">   <img src="images/index-bildekarusell-02.jpeg" alt="bilde3"style="height: 400px; width: 700px;" ></div>  
-                    <div class="bilde">   <img src="images/index-bildekarusell-03.jpeg" alt="bilde4"style="height: 400px; width: 700px;" ></div>  
-
-            </section>
-
-               
-            <section class="referanser container">
-                        <h2 id="referanser">Referanser</h2>
-
-                    <p>Nora 21 år har skrevet følgende om Elvebakken: Jeg feiret 20 års dagen min der og det var en flott lokasjon <br>
-                       Jens 45 år har skrevet følgende om Elvebakken: Bedriften min hadde kickoff her og vi ble godt tatt vare på <br>
-                       Janne 67 år har skrevet følgende om Elvebakken: Barnebarnet mitt hadde konfirmasjon her og jeg har aldri opplevd en så fin lokasjon <br>
-                       Med over 2546 tilbakemeldinger: <br>
-                       ★★★★☆/★★★★★
+            <section id="hero">
+                <div class="container">
+                    <h1>Velkommen til Elvebakken Café</h1>
+                    <p>
+                        En liten kafe med stort og godt felleskap midt i Oslo
+                        sentrum. Besøk oss da vell!
                     </p>
-                </section>
+                </div>
+            </section>
 
-                      <script>
+            <section id="informasjon">
+                <div class="container">
+                    <div>
+                        <p>
+                            Elvebakken er en plass hvor du kan leie plass rom
+                            konferanser, fester eller liknende. Du kan lese mer
+                            om dette på booking siden vår og finne ut av hvordan
+                            du kan booke i menyen over.
+                        </p>
+                        <a href="booking.html"> Booke en våre flotte lokaler</a>
+                        <p>
+                            I tillegg har vi en flott kafé som tilbyr mat og
+                            drikke til rimelige priser. Informasjon om kafeen
+                            kan finnes på cafe siden i menyen over.
+                        </p>
+                        <a href="cafe.html">Les mer om vår cafe</a>
+                    </div>
+                    <div>
+                        <img src="images/index-01.jpeg" alt="infoBilde" />
+                        <a href="#referanser">
+                            Tilbakemeldinger fra over 2000 fornøyde gjester
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-function toggleDarkMode() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-                  
-                
-                     var indeksSynligBilde = 0;
-                     var indeksNesteBilde;
-                     var tid = 2000;
-                  
-                     var bildefiler=[ "bilde1", "bilde2", "bilde3", "bilde4"];
-                  
-                     var bilder = document.querySelectorAll(".bilde");
-                  
-                     bilder[0].style.left ="800px";
-                    bilder[0].style.display="initial";
-                    bilder[0].style.animation="innFraHoyre 2s forwards";
-                    bilder[0].style.animation= "UtTilVenstre 2s forwards";
+            <section id="bildekarusell">
+                <div class="container">
+                    <h2>Galleri</h2>
+                    <img
+                        src="images/index-bildekarusell-01.jpeg"
+                        alt="Bilde fra kafeen"
+                    />
+                </div>
+            </section>
 
-                  setTimeout(flytt, tid);
-                  
-                  function flytt(){
-                    if (indeksSynligBilde === bilder.length-1 ) {
-                      indeksNesteBilde = 0;
-                    }else{
-                      indeksNesteBilde=indeksSynligBilde + 1;
-                    }
-                    bilder[indeksNesteBilde].style.left ="800px";
-                    bilder[indeksNesteBilde].style.display="initial";
-                    bilder[indeksNesteBilde].style.animation="innFraHoyre 2s forwards";
-                  
-                    bilder[indeksSynligBilde].style.animation= "UtTilVenstre 2s forwards";
-                  
-                    indeksSynligBilde = indeksNesteBilde;
-                    setTimeout(flytt, tid);
-                  }
-                      </script>
-
+            <section id="referanser">
+                <div class="container">
+                    <h2>Referanser (4.3 av 5<span id="star">★</span>)</h2>
+                    <ul>
+                        <li>
+                            <p>
+                                Jeg feiret 20 års dagen min der og det vare en
+                                flott lokasjon!
+                            </p>
+                            <p>Nora, 21</p>
+                        </li>
+                        <li>
+                            <p>
+                                Bedriften min hadde kickoff her og vi ble godt
+                                tatt vare på
+                            </p>
+                            <p>Jens, 45</p>
+                        </li>
+                        <li>
+                            <p>
+                                Barnebarnet mitt hadde konfirmasjon her og jeg
+                                har aldri opplevd en så fin lokasjon
+                            </p>
+                            <p>Janne, 67</p>
+                        </li>
+                        <li>
+                            <p>
+                                Jeg feiret 20 års dagen min der og det vare en
+                                flott lokasjon!
+                            </p>
+                            <p>Nora, 21</p>
+                        </li>
+                        <li>
+                            <p>
+                                Bedriften min hadde kickoff her og vi ble godt
+                                tatt vare på
+                            </p>
+                            <p>Jens, 45</p>
+                        </li>
+                        <li>
+                            <p>
+                                Jeg feiret 20 års dagen min der og det vare en
+                                flott lokasjon!
+                            </p>
+                            <p>Nora, 21</p>
+                        </li>
+                        <li>
+                            <p>
+                                Bedriften min hadde kickoff her og vi ble godt
+                                tatt vare på
+                            </p>
+                            <p>Jens, 45</p>
+                        </li>
+                        <li>
+                            <p>
+                                Barnebarnet mitt hadde konfirmasjon her og jeg
+                                har aldri opplevd en så fin lokasjon
+                            </p>
+                            <p>Janne, 67</p>
+                        </li>
+                        <li>
+                            <p>
+                                Jeg feiret 20 års dagen min der og det vare en
+                                flott lokasjon!
+                            </p>
+                            <p>Nora, 21</p>
+                        </li>
+                        <li>
+                            <p>
+                                Bedriften min hadde kickoff her og vi ble godt
+                                tatt vare på
+                            </p>
+                            <p>Jens, 45</p>
+                        </li>
+                        <li>
+                            <p>
+                                Jeg feiret 20 års dagen min der og det vare en
+                                flott lokasjon!
+                            </p>
+                            <p>Nora, 21</p>
+                        </li>
+                        <li>
+                            <p>
+                                Bedriften min hadde kickoff her og vi ble godt
+                                tatt vare på
+                            </p>
+                            <p>Jens, 45</p>
+                        </li>
+                        <li>
+                            <p>
+                                Barnebarnet mitt hadde konfirmasjon her og jeg
+                                har aldri opplevd en så fin lokasjon
+                            </p>
+                            <p>Janne, 67</p>
+                        </li>
+                        <li>
+                            <p>
+                                Jeg feiret 20 års dagen min der og det vare en
+                                flott lokasjon!
+                            </p>
+                            <p>Nora, 21</p>
+                        </li>
+                        <li>
+                            <p>
+                                Bedriften min hadde kickoff her og vi ble godt
+                                tatt vare på
+                            </p>
+                            <p>Jens, 45</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="container">
@@ -136,5 +209,52 @@ function toggleDarkMode() {
                 </div>
             </div>
         </footer>
+        <script>
+            function toggleDarkMode() {
+                let element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+
+            let indeks = 0;
+            let frekvens = 5000; // I milisekunder
+
+            let bildeListe = [
+                "images/index-bildekarusell-01.jpeg",
+                "images/index-bildekarusell-02.jpeg",
+                "images/index-bildekarusell-03.jpeg",
+            ];
+
+            let bilde = document.querySelector("#bildekarusell img");
+
+            setTimeout(flytt, frekvens);
+
+            function flytt() {
+                indeks >= bildeListe.length - 1 ? (indeks = 0) : indeks++;
+
+                bilde.src = bildeListe[indeks];
+
+                setTimeout(flytt, frekvens);
+            }
+        </script>
     </body>
+    <!--
+<script>
+    let bildeLenker = [
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+    ];
+
+    let karusell = document.querySelector(".karusell");
+
+    bildeLenker.forEach((lenke) => {
+        let img = document.createElement("img");
+        img.src = lenke;
+        img.className = "karusellBilde";
+        karusell.appendChild(img);
+    });
+</script> -->
 </html>

@@ -9,6 +9,9 @@ body {
     background-color: var(--white);
     padding-top: 64px;
 }
+p {
+    max-width: 560px;
+}
 
 h1 {
     margin: 0;
@@ -38,6 +41,7 @@ h1 {
     list-style: none;
     gap: 8px;
     margin: 0;
+    overflow-x: hidden;
 }
 .navbar li a {
     text-decoration: none;
@@ -109,7 +113,7 @@ h1 {
         padding-right: 2rem;
     }
     body {
-        padding-top: 101px !important;
+        padding-top: 92px;
     }
     .footer > div {
         flex-direction: column;
@@ -139,7 +143,7 @@ h1 {
         max-width: 768px;
     }
     body {
-        padding-top: 74px;
+        padding-top: 64px;
     }
 }
 @media only screen and (max-width: 1280px) and (min-width: 1024px) {
@@ -147,13 +151,24 @@ h1 {
         max-width: 1024px;
     }
 }
-@media only screen and (max-width: 1536px) and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
     .container {
         max-width: 1280px;
     }
 }
-@media only screen and (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
-    }
+
+/* Reusable sections */
+#hero {
+    background-color: var(--tertiary);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+#hero h1 {
+    font-size: 2rem;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    max-width: 400px;
 }
