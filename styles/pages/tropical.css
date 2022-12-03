@@ -1,5 +1,5 @@
 body {
-    background: var(--primary);
+    background: var(--dark-primary);
     color: white;
 }
 
@@ -20,8 +20,12 @@ h2 {
 
 #hero .container div a {
     font-size: 1.2rem;
+    background-color: #842a2a;
+    color: white;
+    padding: 1rem;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
     #hero .container div {
         grid-template-columns: repeat(2, 1fr);
     }
