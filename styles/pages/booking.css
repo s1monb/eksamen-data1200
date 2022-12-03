@@ -1,6 +1,3 @@
-body {
-}
-
 ol {
     list-style: none;
     padding-left: 0;
@@ -9,20 +6,25 @@ ol {
 ol > li:before {
     content: attr(seq);
 }
-#book {
-    padding-bottom: 2rem;
-}
 
-#book .container {
+#informasjon .container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#book .container > * {
+#informasjon .container > * {
     width: 100%;
 }
+@media (min-width: 1025px) {
+    #informasjon .container {
+        flex-direction: row;
+    }
+}
 
+#book {
+    padding-bottom: 2rem;
+}
 #book a {
     display: inline-block;
     padding: 0.5em 1em;
@@ -31,10 +33,4 @@ ol > li:before {
     color: #fff;
     text-decoration: none;
     border-radius: 0.25rem;
-}
-
-@media (min-width: 1025px) {
-    #book .container {
-        flex-direction: row;
-    }
 }
