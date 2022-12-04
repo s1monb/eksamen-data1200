@@ -5,14 +5,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Accessibility | Elvebakken Cafe</title>
+        <meta
+            name="description"
+            content="Her kan du finne informasjon om hvordan siden vår har
+                        tatt hensyn til brukere med fokus og testing på
+                        tilgjengelighet."
+        />
         <link rel="stylesheet" href="styles/theme.css" />
         <link rel="stylesheet" href="styles/global.css" />
         <link rel="stylesheet" href="styles/pages/accessibility.css" />
     </head>
     <body>
+        <!-- SKIP TO CONTENT FOR SCREEN-READERS -->
+        <a id="skip" href="#main">Skip to content</a>
         <header class="navbar">
             <div class="container">
-                <a href="index.html"><h1>Elvebakken Cafe</h1></a>
+                <img src="images/logo.png" alt="Logo: Elvebakken Cafe" />
                 <nav>
                     <ul>
                         <li><a href="index.html">Hjem</a></li>
@@ -30,7 +38,81 @@
                 </nav>
             </div>
         </header>
-        <main>Main content here</main>
+        <main id="main">
+            <section id="hero">
+                <div class="container">
+                    <h1>Accessibility</h1>
+                    <p>
+                        Her kan du finne informasjon om hvordan siden vår har
+                        tatt hensyn til brukere med fokus og testing på
+                        tilgjengelighet.
+                    </p>
+                </div>
+            </section>
+            <section id="body">
+                <div class="container">
+                    <h2>Hva vi fant ut ved hjelp av automatisk test</h2>
+                    <p>
+                        Det var ikke mange feil vi fikk når vi kjørte testen fra
+                        <a href="https://wave.webaim.org">wave</a>, dette var
+                        mye fordi vi hadde vært nøye med alt fra semantisk
+                        hiearki, tekst-størrelser og alternative tekster til
+                        bildene. Men de feilene vi fikk handla om kontraster.
+                        Det var to forskjellige plasse på sidene våre hvor
+                        kontrasten ikke var tilstrekkelig for universell
+                        utforming, nemlig brødteksten i Hero-seksjonen og alle
+                        lenkene på topical-siden.
+                    </p>
+                    <img
+                        src="images/contrast-1.png"
+                        alt="Fra automatisk test: Kontrast feil"
+                    />
+                    <img
+                        src="images/contrast-2.png"
+                        alt="Fra automatisk test: Kontrast feil"
+                    />
+                    <p>
+                        Måten vi løste dette var ved å endre bakgrunn og
+                        forgrunnsfargene i Hero-seksjonen slik at det var mer
+                        enn nok kontrast. Det samme gjaldt lenkene som vi fikk
+                        feil på., hvor vi endra bakgrunnen litt og deretter
+                        oppnådde målene med god margin.
+                    </p>
+                    <p>
+                        Den andre feilen vi fikk gitt ut på at vi hadde to
+                        lenker direkte etter hverandre som leda til samme plass.
+                        Her var det logoen og “hjem”-knappen som begge linka til
+                        index-siden. Siden skjermleser må navigere gjennom alle
+                        lenker, fjerna vi den første slik at det blir mindre
+                        duplikat for dem.
+                    </p>
+                    <img src="images/redundant-1.png" alt="Feilmelding" />
+
+                    <h2>
+                        Valgene vi tok for å gjøre nettsiden universalt utformet
+                    </h2>
+                    <p>
+                        De litt mer overordnede valgene vi tok før vi i det hele
+                        tatt begynte å kode, var at vi ønsket en viss struktur
+                        som gikk gjennom hele siden. Dette gjelder navigasjon,
+                        hero og ikke minst footer. Disse skulle være omtrentlig
+                        likt utformet, men bare litt anderledes tekst. En annen
+                        ting vi hadde fokus på, var å ha undermenyer på siden
+                        slik at man kan utnytte snarveier for å komme til hvor
+                        man vil på sidene. Dette gjorde vi ikke på alle sidene,
+                        men på dem med lengst innhold og størst struktur.
+                    </p>
+                    <p>
+                        En siste ting vi lagde som gjør siden enda mer
+                        universelt utformet, er en “skip to main content” link.
+                        Dette er en lenke som ikke er synlig, men er den første
+                        lenka man kommer til når man trykker “tab” på siden.
+                        Denne gjør at skjermlesere ikke trenger å trykke gjennom
+                        hele navigasjonen hver gang man skal lese en ny side.
+                    </p>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="container">
                 <div>

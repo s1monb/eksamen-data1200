@@ -47,7 +47,7 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-    #person .container p {
+    #person .container * {
         max-width: 100%;
     }
     #person .container div {

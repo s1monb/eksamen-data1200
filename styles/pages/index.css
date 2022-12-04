@@ -1,3 +1,4 @@
+/* INDEKS SIDE */
 body {
     background-color: var(--white);
 }
@@ -68,7 +69,10 @@ body {
     justify-content: center;
     margin: 0 auto;
     padding: 0;
-    max-width: 800px;
+}
+
+#referanser ul li:nth-child(even) {
+    background-color: #ffcbcb;
 }
 
 @media (max-width: 768px) {

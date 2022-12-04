@@ -5,14 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Elvebakken Cafe</title>
+        <meta
+            name="description"
+            content="En liten kafe med stort og godt felleskap midt i Oslo
+                        sentrum. Besøk oss da vell!"
+        />
         <link rel="stylesheet" href="styles/theme.css" />
         <link rel="stylesheet" href="styles/global.css" />
         <link rel="stylesheet" href="styles/pages/index.css" />
     </head>
     <body>
+        <!-- SKIP TO CONTENT FOR SCREEN-READERS -->
+        <a id="skip" href="#main">Skip to content</a>
         <header class="navbar">
             <div class="container">
-                <a href="index.html"><h1>Elvebakken Cafe</h1></a>
+                <img src="images/logo.png" alt="Logo: Elvebakken Cafe" />
                 <nav>
                     <ul>
                         <li><a class="active" href="index.html">Hjem</a></li>
@@ -28,7 +35,7 @@
                 </nav>
             </div>
         </header>
-        <main>
+        <main id="main">
             <section id="hero">
                 <div class="container">
                     <h1>Velkommen til Elvebakken Café</h1>
@@ -245,24 +252,4 @@
             }
         </script>
     </body>
-    <!--
-<script>
-    let bildeLenker = [
-        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    ];
-
-    let karusell = document.querySelector(".karusell");
-
-    bildeLenker.forEach((lenke) => {
-        let img = document.createElement("img");
-        img.src = lenke;
-        img.className = "karusellBilde";
-        karusell.appendChild(img);
-    });
-</script> -->
 </html>
